@@ -1,0 +1,33 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "login",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "userSettings"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "weeklyGoal",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "min"
+            ],
+            "fieldValidateRulesMin": "10"
+        },
+        {
+            "fieldName": "weightUnit",
+            "fieldType": "WeightUnits",
+            "fieldValues": "kg,lb,g"
+        }
+    ],
+    "changelogDate": "20170214181052",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "user_settings",
+    "pagination": "infinite-scroll"
+}
